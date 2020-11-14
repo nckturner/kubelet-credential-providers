@@ -33,10 +33,11 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ecr"
 
+	plugin "kubelet-credential-providers/framework"
+
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/klog/v2"
-	"k8s.io/kubernetes/pkg/credentialprovider/apis/credentials/v1alpha1"
-	plugin "k8s.io/kubernetes/pkg/credentialprovider/plugin/framework"
+	"k8s.io/kubelet/pkg/apis/credentialprovider/v1alpha1"
 )
 
 var ecrPattern = regexp.MustCompile(`^(\d{12})\.dkr\.ecr(\-fips)?\.([a-zA-Z0-9][a-zA-Z0-9-_]*)\.(amazonaws\.com(\.cn)?|sc2s\.sgov\.gov|c2s\.ic\.gov)$`)
