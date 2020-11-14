@@ -28,8 +28,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/apimachinery/pkg/runtime/serializer/json"
-	"k8s.io/kubernetes/pkg/credentialprovider/apis/credentials/install"
-	"k8s.io/kubernetes/pkg/credentialprovider/apis/credentials/v1alpha1"
+	"k8s.io/kubelet/pkg/apis/credentialprovider/install"
+	"k8s.io/kubelet/pkg/apis/credentialprovider/v1alpha1"
 )
 
 var (
